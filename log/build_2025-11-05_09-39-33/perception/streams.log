@@ -1,0 +1,41 @@
+[2.138s] Invoking command in '/home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/src/perception': PYTHONPATH=/home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/build/perception/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/perception/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/perception build --build-base /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/build/perception/build install --record /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/build/perception/install.log --single-version-externally-managed install_data
+[2.356s] running egg_info
+[2.356s] creating ../../build/perception/perception.egg-info
+[2.357s] writing ../../build/perception/perception.egg-info/PKG-INFO
+[2.362s] writing dependency_links to ../../build/perception/perception.egg-info/dependency_links.txt
+[2.364s] writing entry points to ../../build/perception/perception.egg-info/entry_points.txt
+[2.365s] writing requirements to ../../build/perception/perception.egg-info/requires.txt
+[2.367s] writing top-level names to ../../build/perception/perception.egg-info/top_level.txt
+[2.370s] writing manifest file '../../build/perception/perception.egg-info/SOURCES.txt'
+[2.376s] reading manifest file '../../build/perception/perception.egg-info/SOURCES.txt'
+[2.378s] writing manifest file '../../build/perception/perception.egg-info/SOURCES.txt'
+[2.380s] running build
+[2.380s] running build_py
+[2.381s] creating /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/build/perception/build
+[2.382s] creating /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/build/perception/build/lib
+[2.382s] creating /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/build/perception/build/lib/perception
+[2.384s] copying perception/__init__.py -> /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/build/perception/build/lib/perception
+[2.387s] copying perception/interactive_plane.py -> /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/build/perception/build/lib/perception
+[2.391s] copying perception/process_pointcloud.py -> /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/build/perception/build/lib/perception
+[2.395s] running install
+[2.396s] running install_lib
+[2.399s] creating /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/perception/lib/python3.10/site-packages/perception
+[2.401s] copying /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/build/perception/build/lib/perception/__init__.py -> /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/perception/lib/python3.10/site-packages/perception
+[2.405s] copying /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/build/perception/build/lib/perception/interactive_plane.py -> /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/perception/lib/python3.10/site-packages/perception
+[2.409s] copying /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/build/perception/build/lib/perception/process_pointcloud.py -> /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/perception/lib/python3.10/site-packages/perception
+[2.416s] byte-compiling /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/perception/lib/python3.10/site-packages/perception/__init__.py to __init__.cpython-310.pyc
+[2.421s] byte-compiling /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/perception/lib/python3.10/site-packages/perception/interactive_plane.py to interactive_plane.cpython-310.pyc
+[2.428s] byte-compiling /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/perception/lib/python3.10/site-packages/perception/process_pointcloud.py to process_pointcloud.cpython-310.pyc
+[2.434s] running install_data
+[2.435s] creating /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/perception/share/ament_index
+[2.435s] creating /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/perception/share/ament_index/resource_index
+[2.436s] creating /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/perception/share/ament_index/resource_index/packages
+[2.438s] copying resource/perception -> /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/perception/share/ament_index/resource_index/packages
+[2.442s] copying package.xml -> /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/perception/share/perception
+[2.445s] running install_egg_info
+[2.451s] Copying ../../build/perception/perception.egg-info to /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/perception/lib/python3.10/site-packages/perception-0.0.0-py3.10.egg-info
+[2.491s] running install_scripts
+[2.509s] Installing interactive_plane script to /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/perception/lib/perception
+[2.511s] Installing process_pointcloud script to /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/perception/lib/perception
+[2.514s] writing list of installed files to '/home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/build/perception/install.log'
+[2.530s] Invoked command in '/home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/src/perception' returned '0': PYTHONPATH=/home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/build/perception/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/perception/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/perception build --build-base /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/build/perception/build install --record /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/build/perception/install.log --single-version-externally-managed install_data

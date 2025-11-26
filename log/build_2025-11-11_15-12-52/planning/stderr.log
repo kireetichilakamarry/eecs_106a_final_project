@@ -1,0 +1,5 @@
+  File "/home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/planning/lib/python3.10/site-packages/planning/main.py", line 90
+    joint_state = self.ik_planner.compute_ik(self.joint_state, self.cube_pose.point.x + 0.0, self.cube_pose.point.y - 0.035, self.cube_pose.point.z + 0.185\
+                                                                                                                             
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+

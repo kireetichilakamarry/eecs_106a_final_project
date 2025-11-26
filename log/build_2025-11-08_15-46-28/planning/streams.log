@@ -1,0 +1,42 @@
+[2.157s] Invoking command in '/home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/src/planning': PYTHONPATH=/home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/build/planning/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/planning/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/planning build --build-base /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/build/planning/build install --record /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/build/planning/install.log --single-version-externally-managed install_data
+[2.367s] running egg_info
+[2.368s] creating ../../build/planning/planning.egg-info
+[2.369s] writing ../../build/planning/planning.egg-info/PKG-INFO
+[2.374s] writing dependency_links to ../../build/planning/planning.egg-info/dependency_links.txt
+[2.376s] writing entry points to ../../build/planning/planning.egg-info/entry_points.txt
+[2.378s] writing requirements to ../../build/planning/planning.egg-info/requires.txt
+[2.380s] writing top-level names to ../../build/planning/planning.egg-info/top_level.txt
+[2.382s] writing manifest file '../../build/planning/planning.egg-info/SOURCES.txt'
+[2.390s] reading manifest file '../../build/planning/planning.egg-info/SOURCES.txt'
+[2.392s] writing manifest file '../../build/planning/planning.egg-info/SOURCES.txt'
+[2.394s] running build
+[2.394s] running build_py
+[2.395s] creating /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/build/planning/build
+[2.395s] creating /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/build/planning/build/lib
+[2.398s] creating /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/build/planning/build/lib/planning
+[2.399s] copying planning/__init__.py -> /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/build/planning/build/lib/planning
+[2.401s] copying planning/ik.py -> /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/build/planning/build/lib/planning
+[2.406s] copying planning/main.py -> /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/build/planning/build/lib/planning
+[2.409s] copying planning/static_tf_transform.py -> /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/build/planning/build/lib/planning
+[2.412s] copying planning/transform_cube_pose.py -> /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/build/planning/build/lib/planning
+[2.415s] running install
+[2.416s] running install_lib
+[2.419s] copying /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/build/planning/build/lib/planning/ik.py -> /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/planning/lib/python3.10/site-packages/planning
+[2.424s] copying /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/build/planning/build/lib/planning/main.py -> /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/planning/lib/python3.10/site-packages/planning
+[2.429s] copying /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/build/planning/build/lib/planning/static_tf_transform.py -> /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/planning/lib/python3.10/site-packages/planning
+[2.435s] copying /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/build/planning/build/lib/planning/transform_cube_pose.py -> /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/planning/lib/python3.10/site-packages/planning
+[2.442s] byte-compiling /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/planning/lib/python3.10/site-packages/planning/ik.py to ik.cpython-310.pyc
+[2.448s] byte-compiling /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/planning/lib/python3.10/site-packages/planning/main.py to main.cpython-310.pyc
+[2.453s] byte-compiling /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/planning/lib/python3.10/site-packages/planning/static_tf_transform.py to static_tf_transform.cpython-310.pyc
+[2.458s] byte-compiling /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/planning/lib/python3.10/site-packages/planning/transform_cube_pose.py to transform_cube_pose.cpython-310.pyc
+[2.463s] running install_data
+[2.463s] running install_egg_info
+[2.466s] removing '/home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/planning/lib/python3.10/site-packages/planning-0.0.0-py3.10.egg-info' (and everything under it)
+[2.471s] Copying ../../build/planning/planning.egg-info to /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/planning/lib/python3.10/site-packages/planning-0.0.0-py3.10.egg-info
+[2.501s] running install_scripts
+[2.518s] Installing ik script to /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/planning/lib/planning
+[2.521s] Installing main script to /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/planning/lib/planning
+[2.523s] Installing tf script to /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/planning/lib/planning
+[2.525s] Installing transform_cube_pose script to /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/planning/lib/planning
+[2.528s] writing list of installed files to '/home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/build/planning/install.log'
+[2.582s] Invoked command in '/home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/src/planning' returned '0': PYTHONPATH=/home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/build/planning/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/planning/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/planning build --build-base /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/build/planning/build install --record /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/build/planning/install.log --single-version-externally-managed install_data

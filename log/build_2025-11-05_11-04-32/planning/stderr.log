@@ -1,0 +1,5 @@
+  File "/home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/planning/lib/python3.10/site-packages/planning/main.py", line 156
+    def _on_exec_done(self, future):= "base_link"
+                                   ^^
+SyntaxError: expected ':'
+
