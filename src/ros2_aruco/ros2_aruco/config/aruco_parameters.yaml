@@ -1,7 +1,19 @@
 /aruco_node:
   ros__parameters:
-    marker_size: 0.15
+    # 1. Update marker_ids to list ALL IDs you want to track
+    marker_ids: [1, 10]
+    
+    # 2. Use marker_size_map to specify the size for each ID
+    marker_size_map: {
+        1: 0.10,  # Base marker is 150mm
+        10: 0.15  # Object marker is 100mm (0.1m)
+    }
+    
+    # The single marker_size parameter is now ignored if an ID is in the map, 
+    # but you can leave it for backward compatibility or as a default:
+    # marker_size: 0.15 
+    
+    # --- Other parameters remain the same ---
     aruco_dictionary_id: DICT_5X5_250
-    image_topic: /camera/camera/color/image_raw
-    camera_info_topic: /camera/camera/color/camera_info
-    camera_frame: camera_color_optical_frame
+    image_topic: /camera1/image_raw
+    camera_info_topic: /camera1/camera_info
