@@ -437,6 +437,12 @@ from scipy.spatial.transform import Rotation as R # Unused import, but kept for 
 import numpy as np # Unused import, but kept for completeness
 import time # Unused import, but kept for completeness
 
+
+'''
+ros2 launch planning lab7_bringup.launch.py plane_a:=0.0 plane_b:=0.0 plane_c:=0.0 plane_d:=0.0 ar_marker:=ar_marker_10
+ros2 run planning main
+'''
+
 from planning.ik import IKPlanner
 
 class UR7e_CubePickAndPlace(Node): # CHANGED: Class name
@@ -531,18 +537,18 @@ class UR7e_CubePickAndPlace(Node): # CHANGED: Class name
         self.get_logger().info(f"PICKUP | Cube: ({tx_cube:.3f}, {ty_cube:.3f}, {tz_cube:.3f})")
 
         # 1) Move to Pre-Grasp Position (High)
-        joint_state = self.ik_planner.compute_ik(self.joint_state, tx_cube, ty_cube - 0.172 , tz_cube + 0.25)
+        joint_state = self.ik_planner.compute_ik(self.joint_state, tx_cube, ty_cube - 0.17 , tz_cube + 0.25)
         self.job_queue.append(joint_state)
 
         # 2) Move to Grasp Position (Lower)
-        joint_state = self.ik_planner.compute_ik(self.joint_state, tx_cube, ty_cube - 0.172, tz_cube + 0.21)
+        joint_state = self.ik_planner.compute_ik(self.joint_state, tx_cube, ty_cube - 0.17, tz_cube + 0.21)
         self.job_queue.append(joint_state)
 
         # 3) Close the gripper (Grasp)
         self.job_queue.append("toggle_grip")
 
         # 4) Pick up cube (Lift to high position)
-        joint_state = self.ik_planner.compute_ik(self.joint_state, tx_cube, ty_cube - 0.172, tz_cube + 0.35)
+        joint_state = self.ik_planner.compute_ik(self.joint_state, tx_cube, ty_cube - 0.17, tz_cube + 0.35)
         self.job_queue.append(joint_state)
         
 
@@ -558,7 +564,15 @@ class UR7e_CubePickAndPlace(Node): # CHANGED: Class name
         joint_state = self.ik_planner.compute_ik(self.joint_state, tx_drop, ty_drop, tz_drop + 0.35)
         self.job_queue.append(joint_state)
         
-        # 6) SCROLL
+        # 6.1) FIRST SCROLL
+        joint_state = self.ik_planner.compute_ik(self.joint_state, tx_drop + 0.05, ty_drop, tz_drop + 0.208)
+        self.job_queue.append(joint_state)
+        joint_state = self.ik_planner.compute_ik(self.joint_state, tx_drop + 0.05 , ty_drop - 0.15, tz_drop + 0.208)
+        self.job_queue.append(joint_state)
+
+        # 6.2) SECOND SCROLL
+        joint_state = self.ik_planner.compute_ik(self.joint_state, tx_drop, ty_drop, tz_drop + 0.35)
+        self.job_queue.append(joint_state)
         joint_state = self.ik_planner.compute_ik(self.joint_state, tx_drop + 0.05, ty_drop, tz_drop + 0.208)
         self.job_queue.append(joint_state)
         joint_state = self.ik_planner.compute_ik(self.joint_state, tx_drop + 0.05 , ty_drop - 0.15, tz_drop + 0.208)

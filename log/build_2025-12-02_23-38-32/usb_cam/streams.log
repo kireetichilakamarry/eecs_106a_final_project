@@ -1,0 +1,65 @@
+[0.936s] Invoking command in '/home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/build/usb_cam': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/ros2_aruco:/home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/planning:/home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/perception:/home/ff/ee106a/robot_workspaces/ur/install/ur7e_utils:/opt/ros/humble /usr/bin/cmake --build /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/build/usb_cam -- -j32 -l32
+[1.156s] [ 14%] Built target gtest_main
+[1.167s] [ 42%] Built target usb_cam
+[1.174s] [ 57%] Built target usb_cam_node_exe
+[1.175s] [ 57%] Built target gtest
+[1.257s] [ 71%] Built target usb_cam_node
+[1.296s] [ 92%] Built target test_pixel_formats
+[1.298s] [100%] Built target test_usb_cam_utils
+[1.324s] Invoked command in '/home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/build/usb_cam' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/ros2_aruco:/home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/planning:/home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/perception:/home/ff/ee106a/robot_workspaces/ur/install/ur7e_utils:/opt/ros/humble /usr/bin/cmake --build /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/build/usb_cam -- -j32 -l32
+[1.342s] Invoking command in '/home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/build/usb_cam': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/ros2_aruco:/home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/planning:/home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/perception:/home/ff/ee106a/robot_workspaces/ur/install/ur7e_utils:/opt/ros/humble /usr/bin/cmake --install /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/build/usb_cam
+[1.351s] -- Install configuration: ""
+[1.353s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/share/usb_cam/environment/library_path.sh
+[1.354s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/share/usb_cam/environment/library_path.dsv
+[1.356s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/lib/usb_cam/usb_cam_node_exe
+[1.362s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/lib/usb_cam/show_image.py
+[1.365s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/lib/libusb_cam.so
+[1.368s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/lib/libusb_cam_node.so
+[1.371s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/include
+[1.373s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/include/usb_cam
+[1.374s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/include/usb_cam/constants.hpp
+[1.375s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/include/usb_cam/conversions.hpp
+[1.376s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/include/usb_cam/formats
+[1.378s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/include/usb_cam/formats/av_pixel_format_helper.hpp
+[1.379s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/include/usb_cam/formats/m420.hpp
+[1.380s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/include/usb_cam/formats/mjpeg.hpp
+[1.380s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/include/usb_cam/formats/mono.hpp
+[1.381s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/include/usb_cam/formats/pixel_format_base.hpp
+[1.382s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/include/usb_cam/formats/rgb.hpp
+[1.383s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/include/usb_cam/formats/utils.hpp
+[1.383s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/include/usb_cam/formats/uyvy.hpp
+[1.384s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/include/usb_cam/formats/yuyv.hpp
+[1.385s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/include/usb_cam/usb_cam.hpp
+[1.386s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/include/usb_cam/usb_cam_node.hpp
+[1.386s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/include/usb_cam/utils.hpp
+[1.389s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/lib/libusb_cam_node.so
+[1.393s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/share/usb_cam/launch
+[1.395s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/share/usb_cam/launch/__init__.py
+[1.396s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/share/usb_cam/launch/camera.launch.py
+[1.397s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/share/usb_cam/launch/camera_config.py
+[1.399s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/share/usb_cam/config
+[1.401s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/share/usb_cam/config/c922_pro_stream_webcam.yaml
+[1.402s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/share/usb_cam/config/camera_info.yaml
+[1.403s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/share/usb_cam/config/params.yaml
+[1.403s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/share/usb_cam/config/params_1.yaml
+[1.405s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/share/usb_cam/config/params_2.yaml
+[1.407s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/share/ament_index/resource_index/package_run_dependencies/usb_cam
+[1.408s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/share/ament_index/resource_index/parent_prefix_path/usb_cam
+[1.409s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/share/usb_cam/environment/ament_prefix_path.sh
+[1.409s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/share/usb_cam/environment/ament_prefix_path.dsv
+[1.410s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/share/usb_cam/environment/path.sh
+[1.411s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/share/usb_cam/environment/path.dsv
+[1.412s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/share/usb_cam/local_setup.bash
+[1.413s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/share/usb_cam/local_setup.sh
+[1.414s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/share/usb_cam/local_setup.zsh
+[1.415s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/share/usb_cam/local_setup.dsv
+[1.416s] -- Installing: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/share/usb_cam/package.dsv
+[1.423s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/share/ament_index/resource_index/packages/usb_cam
+[1.424s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/share/ament_index/resource_index/rclcpp_components/usb_cam
+[1.425s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/share/usb_cam/cmake/ament_cmake_export_libraries-extras.cmake
+[1.426s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/share/usb_cam/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.427s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/share/usb_cam/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.428s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/share/usb_cam/cmake/usb_camConfig.cmake
+[1.428s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/share/usb_cam/cmake/usb_camConfig-version.cmake
+[1.430s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/usb_cam/share/usb_cam/package.xml
+[1.437s] Invoked command in '/home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/build/usb_cam' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/ros2_aruco:/home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/planning:/home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/install/perception:/home/ff/ee106a/robot_workspaces/ur/install/ur7e_utils:/opt/ros/humble /usr/bin/cmake --install /home/cc/ee106a/fa25/class/ee106a-ahe/ros_workspaces/lab7/build/usb_cam

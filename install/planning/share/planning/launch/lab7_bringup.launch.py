@@ -15,14 +15,13 @@ def generate_launch_description():
     realsense_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(
-                get_package_share_directory('realsense2_camera'),
+                get_package_share_directory('usb_cam'), # 1. Change package name to 'usb_cam'
                 'launch',
-                'rs_launch.py'
+                'camera.launch.py' # 2. Change launch file name to 'camera.launch.py'
             )
         ),
+        # 3. Specify launch arguments relevant to usb_cam (example arguments shown)
         launch_arguments={
-            'pointcloud.enable': 'true',
-            'rgb_camera.color_profile': '1920x1080x30',
         }.items(),
     )
 
@@ -77,7 +76,7 @@ def generate_launch_description():
 
     ar_marker_launch_arg = DeclareLaunchArgument(
         'ar_marker',
-        default_value='ar_marker_9'
+        default_value='ar_marker_8'
     )
     ar_marker = LaunchConfiguration('ar_marker')
 
