@@ -135,7 +135,7 @@ class ArucoNode(rclpy.node.Node):
         )
         self.get_logger().info(f"Marker size: {self.marker_size}")
         
-        self.marker_size_map = {1: 0.15, 2: 0.15, 3: 0.15, 4: 0.15, 5: 0.15, 11: 0.15, 
+        self.marker_size_map = {1: 0.025, 2: 0.035, 3: 0.15, 4: 0.15, 5: 0.15, 11: 0.15, 
                                 6: 0.15, 7: 0.15, 8: 0.15, 9: 0.15, 10: 0.15}
         self.get_logger().info(f"Marker size map for marker ids is: {self.marker_size_map}")
 
@@ -195,6 +195,9 @@ class ArucoNode(rclpy.node.Node):
         self.aruco_dictionary = cv2.aruco.Dictionary_get(dictionary_id)
         self.aruco_parameters = cv2.aruco.DetectorParameters_create()
 
+        self.aruco_parameters.minMarkerPerimeterRate = 0.01
+        self.aruco_parameters.polygonalApproxAccuracyRate = 0.06
+
         self.bridge = CvBridge()
 
     def info_callback(self, info_msg):
@@ -227,52 +230,52 @@ class ArucoNode(rclpy.node.Node):
         )
 
         if marker_ids is not None:
-            # process each marker individually to allow for diff marker sizes
+            # Print the detected IDs to confirm the 0.035m marker is being found!
+            print("MARKER IDS DETECTED BY ARUCO:", marker_ids) 
+            
+            # Use a dictionary to group corners and IDs by their corresponding physical size
+            markers_by_size = {} 
+            
+            for i, marker_id_array in enumerate(marker_ids):
+                marker_id = marker_id_array[0]
+                # Get size, defaulting to self.marker_size if ID is not in the map
+                size = self.marker_size_map.get(marker_id, self.marker_size) 
+                
+                # Create a list for this size if it doesn't exist
+                if size not in markers_by_size:
+                    markers_by_size[size] = {"corners": [], "ids": []}
+                
+                markers_by_size[size]["corners"].append(corners[i])
+                markers_by_size[size]["ids"].append(marker_id_array) # Store the original numpy array
+            
             rvecs = []
             tvecs = []
-            turtlebot_corners = []
-            turtlebot_markers = []
-            goal_corners = []
-            goal_markers = []
             final_marker_ids = []
-            for i, marker_id in enumerate(marker_ids):
-                marker_size = self.marker_size_map[marker_id[0]]
-                if marker_size == 0.05:
-                    turtlebot_corners.append(corners[i])
-                    turtlebot_markers.append(marker_id)
-                elif marker_size == 0.15:
-                    goal_corners.append(corners[i])
-                    goal_markers.append(marker_id)
 
-            if len(goal_markers) > 0:
-                goal_rvecs, goal_tvecs = [], []
-                if cv2.__version__ > "4.0.0":
-                    goal_rvecs, goal_tvecs, _ = cv2.aruco.estimatePoseSingleMarkers(
-                        goal_corners, 0.15, self.intrinsic_mat, self.distortion
-                    )
-                else:
-                    goal_rvecs, goal_tvecs = cv2.aruco.estimatePoseSingleMarkers(
-                        goal_corners, goal_markers, self.intrinsic_mat, self.distortion
-                    )
-                self.get_logger().info(f"info is {goal_rvecs}, {goal_tvecs}")
-                self.get_logger().info(f"info is {goal_markers}")
-                rvecs.extend(goal_rvecs)
-                tvecs.extend(goal_tvecs)
-                final_marker_ids.extend(goal_markers)
-
-            if len(turtlebot_markers) > 0:
-                turtlebot_rvecs, turtlebot_tvecs = [], []
-                if cv2.__version__ > "4.0.0":
-                    turtlebot_rvecs, turtlebot_tvecs, _ = cv2.aruco.estimatePoseSingleMarkers(
-                        turtlebot_corners, 0.05, self.intrinsic_mat, self.distortion
-                    )
-                else:
-                    turtlebot_rvecs, turtlebot_tvecs = cv2.aruco.estimatePoseSingleMarkers(
-                        turtlebot_corners, turtlebot_markers, self.intrinsic_mat, self.distortion
-                    )
-                rvecs.extend(turtlebot_rvecs)
-                tvecs.extend(turtlebot_tvecs)
-                final_marker_ids.extend(turtlebot_markers)
+            # Iterate through the dictionary to perform pose estimation for each size group
+            for size, data in markers_by_size.items():
+                current_corners = data["corners"]
+                current_ids = data["ids"]
+                
+                if len(current_ids) > 0:
+                    current_corners_np = np.array(current_corners, dtype=np.float32)
+                    
+                    # Estimate pose using the correct physical size (`size`)
+                    # You only need the version check once for estimatePoseSingleMarkers
+                    if cv2.__version__ > "4.0.0":
+                        current_rvecs, current_tvecs, _ = cv2.aruco.estimatePoseSingleMarkers(
+                            current_corners_np, size, self.intrinsic_mat, self.distortion
+                        )
+                    else:
+                        current_rvecs, current_tvecs = cv2.aruco.estimatePoseSingleMarkers(
+                            current_corners_np, size, self.intrinsic_mat, self.distortion
+                        )
+                    
+                    rvecs.extend(current_rvecs)
+                    tvecs.extend(current_tvecs)
+                    final_marker_ids.extend(current_ids)
+            
+            # --- The loop that publishes the poses and transforms (below) remains the same ---
 
             for i, marker_id in enumerate(final_marker_ids):
                 pose = Pose()

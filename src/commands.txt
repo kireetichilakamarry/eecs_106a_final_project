@@ -1,0 +1,11 @@
+ros2 run ur7e_utils enable_comms
+
+ros2 run ur7e_utils tuck
+
+ros2 run ur7e_utils reset_state
+
+rviz2
+
+ros2 launch planning lab7_bringup.launch.py plane_a:=0.0 plane_b:=0.0 plane_c:=0.0 plane_d:=0.0 ar_marker:=ar_marker_10
+
+ros2 run planning main

@@ -1,0 +1,1 @@
+When we changed the camera angle so that the camera was more parallel to the table, the scrolling was more consistent, but the pen-pickup spot was further out (if we move the pen further up the paper, it should be fine)
